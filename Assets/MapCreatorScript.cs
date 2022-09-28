@@ -38,19 +38,23 @@ public class MapCreatorScript : MonoBehaviour
                 Block currentBlock = map[i][j];
                 if (currentBlock != null && placedItems[i,j] == null) {
                     try {  // if it fails just skip this coord
-                        GameObject newObject = Instantiate(prefabMapper[currentBlock.type.key], new Vector3(j,0,i), Quaternion.identity);
-                        double rotation = currentBlock.rotation * (180/System.Math.PI);
+                        // does it have a parent
+                        Coordinate placeCoords = new Coordinate(i,j);
+                        if (currentBlock.parent != null) {
+                            placeCoords = currentBlock.parent;  // set the coords to the parents coord
+                        }
+                        GameObject newObject = Instantiate(prefabMapper[currentBlock.type.key], new Vector3(placeCoords.row,0,placeCoords.col), Quaternion.identity);
+                        double rotation = -currentBlock.rotation * (180/System.Math.PI);
                         newObject.transform.Rotate(0,(float)rotation,0);
                         Dimensions rotatedDimensions = GetRotatedDimensions(currentBlock.rotation, currentBlock.type.dimensions);
-                        for (int x = i; x < i + Mathf.Abs(rotatedDimensions.width); x++)
-                        {
-                            for (int y = j; y < j+Mathf.Abs(rotatedDimensions.height); y++) {
+                        for (int x = placeCoords.col; x != placeCoords.col + rotatedDimensions.width; x += rotatedDimensions.width > 0 ? 1 : -1)  {
+                            for (int y = placeCoords.row; y != placeCoords.row + rotatedDimensions.height; y += rotatedDimensions.height > 0 ? 1 : -1) {
                                 placedItems[x,y] = newObject;  // set the object as being placed already
                             }
                         }
                     }
                     catch (System.Exception e) {
-                        Debug.Log(e);
+                        Debug.Log(e);  // throwing system out of bound exceptions but I have no idea why are its 
                     }
                 }
             }
