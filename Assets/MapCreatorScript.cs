@@ -15,18 +15,10 @@ public class MapCreatorScript : MonoBehaviour
 
     public string json;
     public List<List<Block>> map;
-    public ObjectMapper[] objectMapping;
-
-    private Dictionary<string, GameObject> prefabMapper = new Dictionary<string, GameObject>();
     private GameObject[,] placedItems;
     
     void Start()
     {
-
-        foreach (var gameObjectMapping in objectMapping)
-        {
-            prefabMapper.Add(gameObjectMapping.name, gameObjectMapping.gameObject);
-        }
 
         map = Newtonsoft.Json.JsonConvert.DeserializeObject<List<List<Block>>>(json);
         placedItems = new GameObject[map.Count, map[0].Count];
@@ -43,7 +35,7 @@ public class MapCreatorScript : MonoBehaviour
                         if (currentBlock.parent != null) {
                             placeCoords = currentBlock.parent;  // set the coords to the parents coord
                         }
-                        GameObject newObject = Instantiate(prefabMapper[currentBlock.type.key], new Vector3(placeCoords.row,0,placeCoords.col), Quaternion.identity);
+                        GameObject newObject = Instantiate(Resources.Load(currentBlock.type.key) as GameObject, new Vector3(placeCoords.row,0,placeCoords.col), Quaternion.identity);
                         double rotation = -currentBlock.rotation * (180/System.Math.PI);
                         newObject.transform.Rotate(0,(float)rotation,0);
                         Dimensions rotatedDimensions = GetRotatedDimensions(currentBlock.rotation, currentBlock.type.dimensions);
