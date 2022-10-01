@@ -10,15 +10,12 @@ public class GameController : MonoBehaviour
 {
     public SocketIOUnity socket;
 
-    public InputField EventNameTxt;
-    public InputField DataTxt;
-    public Text ReceivedText;  
-
-    public GameObject objectToSpin;
+    public MapCreatorScript MapCreatorScript;
 
     // Start is called before the first frame update
     void Start()
     {
+        MapCreatorScript = GameObject.Find("MapCreator").GetComponent<MapCreatorScript>();
         var uri = new Uri("http://localhost:8080");
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {
@@ -54,36 +51,37 @@ public class GameController : MonoBehaviour
         {
             Debug.Log($"{DateTime.Now} Reconnecting: attempt = {e}");
         };
-        ////
+        
 
         Debug.Log("Connecting...");
         socket.Connect();
+        // socket.OnUnityThread((name, response) => {
+        //     Debug.Log("Received On " + name + " : " + response.GetValue().GetRawText() + "\n");
+        // });
 
-        socket.OnUnityThread("spin", (data) =>
+        // "spin" is an example of an event name.
+        socket.OnUnityThread("map_update", (response) =>
         {
-            rotateAngle = 0;
+            Debug.Log("Running in here");
+            Debug.Log(response.GetValue());
+            MapCreatorScript.CreateMap(response.GetValue().GetRawText());  // pass the map details to the script
         });
-
-        ReceivedText.text = "";
-        socket.OnAnyInUnityThread((name, response) =>
-        {
-            ReceivedText.text += "Received On " + name + " : " + response.GetValue().GetRawText() + "\n";
-        });
+        
     }
 
-    public void EmitTest()
-    {
-        string eventName = EventNameTxt.text.Trim().Length < 1 ? "hello" : EventNameTxt.text;
-        string txt = DataTxt.text;
-        if (!IsJSON(txt))
-        {
-            socket.Emit(eventName, txt);
-        }
-        else
-        {
-            socket.EmitStringAsJSON(eventName, txt);
-        }
-    }
+    // public void EmitTest()
+    // {
+    //     string eventName = EventNameTxt.text.Trim().Length < 1 ? "hello" : EventNameTxt.text;
+    //     string txt = DataTxt.text;
+    //     if (!IsJSON(txt))
+    //     {
+    //         socket.Emit(eventName, txt);
+    //     }
+    //     else
+    //     {
+    //         socket.EmitStringAsJSON(eventName, txt);
+    //     }
+    // }
 
     public static bool IsJSON(string str)
     {
@@ -111,48 +109,5 @@ public class GameController : MonoBehaviour
     public void EmitSpin()
     {
         socket.Emit("spin");
-    }
-
-    public void EmitClass()
-    {
-        TestClass testClass = new TestClass(new string[] { "foo", "bar", "baz", "qux" });
-        TestClass2 testClass2 = new TestClass2("lorem ipsum");
-        socket.Emit("class", testClass2);
-    }
-
-    // our test class
-    [System.Serializable]
-    class TestClass
-    {
-        public string[] arr;
-
-        public TestClass(string[] arr)
-        {
-            this.arr = arr;
-        }
-    }
-
-    [System.Serializable]
-    class TestClass2
-    {
-        public string text;
-
-        public TestClass2(string text)
-        {
-            this.text = text;
-        }
-    }
-    //
-
-
-    float rotateAngle = 45;
-    readonly float MaxRotateAngle = 45;
-    void Update()
-    {
-        if(rotateAngle < MaxRotateAngle)
-        {
-            rotateAngle++;
-            objectToSpin.transform.Rotate(0, 1, 0);
-        }
     }
 }

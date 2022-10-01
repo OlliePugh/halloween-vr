@@ -19,8 +19,25 @@ public class MapCreatorScript : MonoBehaviour
     
     void Start()
     {
+        if (!System.String.IsNullOrEmpty(json)) {
+            CreateMap(json);
+        }
+    }
 
-        map = Newtonsoft.Json.JsonConvert.DeserializeObject<List<List<Block>>>(json);
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
+    void ClearMap() {
+        foreach (Transform child in this.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
+
+    public void CreateMap(string jsonMap) {
+        ClearMap();
+        map = Newtonsoft.Json.JsonConvert.DeserializeObject<List<List<Block>>>(jsonMap);
         placedItems = new GameObject[map.Count, map[0].Count];
 
         for (int i = 0; i < map.Count; i++)
@@ -35,7 +52,7 @@ public class MapCreatorScript : MonoBehaviour
                         if (currentBlock.parent != null) {
                             placeCoords = currentBlock.parent;  // set the coords to the parents coord
                         }
-                        GameObject newObject = Instantiate(Resources.Load(currentBlock.type.key) as GameObject, new Vector3(placeCoords.row,0,placeCoords.col), Quaternion.identity);
+                        GameObject newObject = Instantiate(Resources.Load(currentBlock.type.key) as GameObject, new Vector3(placeCoords.row,0,placeCoords.col), Quaternion.identity, this.transform);
                         double rotation = -currentBlock.rotation * (180/System.Math.PI);
                         newObject.transform.Rotate(0,(float)rotation,0);
                         Dimensions rotatedDimensions = GetRotatedDimensions(currentBlock.rotation, currentBlock.type.dimensions);
@@ -51,11 +68,6 @@ public class MapCreatorScript : MonoBehaviour
                 }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     Dimensions GetRotatedDimensions(float rotation, Dimensions dimensions) {

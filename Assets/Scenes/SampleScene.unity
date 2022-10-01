@@ -329,8 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d86ea7339e6cce40bdd9291515357ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  json: '[[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":1},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":3},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":1,"row":0},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":1,"row":3},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"blue"},"dimensions":{"width":2,"height":1},"key":"Bed","name":"Bed"},"parent":{"col":2,"row":1},"rotation":0},{"type":{"tileStyle":{"colour":"black","textColour":"white"},"name":"Spawn
-    Point","dimensions":{"width":1,"height":1},"max":1,"min":1,"key":"SpawnPoint"},"parent":{"col":2,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":3},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"blue"},"dimensions":{"width":2,"height":1},"key":"Bed","name":"Bed"},"parent":{"col":2,"row":1},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":3},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":1},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":3},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]]'
+  json: 
 --- !u!4 &109517039
 Transform:
   m_ObjectHideFlags: 0
@@ -339,12 +338,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109517037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 26.339746, z: -12}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1259737109}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &275107299 stripped
 Transform:
@@ -352,6 +352,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1127753061}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &509820148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509820150}
+  - component: {fileID: 509820149}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &509820149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509820148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99032b7a6de13474eaa267b0127eeca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MapCreatorScript: {fileID: 0}
+--- !u!4 &509820150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509820148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.23125255, y: 1.3907135, z: 1.7558011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &644072342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,7 +659,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &891918386
 MonoBehaviour:
@@ -726,7 +771,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1127753061
 PrefabInstance:
@@ -797,6 +842,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90523bdc61b48e469cbfd161517d646, type: 3}
+--- !u!1 &1259737108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259737109}
+  m_Layer: 0
+  m_Name: Bruh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259737109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259737108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 109517039}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303893946
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +1063,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1517175849
 PrefabInstance:
@@ -1736,7 +1812,7 @@ Transform:
   m_Children:
   - {fileID: 1557663409}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &2083694909
 CharacterController:
@@ -1799,7 +1875,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2091005447
 MonoBehaviour:
