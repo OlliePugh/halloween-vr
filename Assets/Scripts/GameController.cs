@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
         {
             Query = new Dictionary<string, string>
                 {
-                    {"token", "UNITY" }
+                    {"token", Environment.GetEnvironmentVariable("UNITY_ACCESS_TOKEN") }  // TODO find a way to not expose this secret
                 }
             ,
             EIO = 4
@@ -35,14 +35,6 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("socket.OnConnected");
         };
-        socket.OnPing += (sender, e) =>
-        {
-            Debug.Log("Ping");
-        };
-        socket.OnPong += (sender, e) =>
-        {
-            Debug.Log("Pong: " + e.TotalMilliseconds);
-        };
         socket.OnDisconnected += (sender, e) =>
         {
             Debug.Log("disconnect: " + e);
@@ -55,34 +47,23 @@ public class GameController : MonoBehaviour
 
         Debug.Log("Connecting...");
         socket.Connect();
-        // socket.OnUnityThread((name, response) => {
-        //     Debug.Log("Received On " + name + " : " + response.GetValue().GetRawText() + "\n");
-        // });
 
-        // "spin" is an example of an event name.
         socket.OnUnityThread("map_update", (response) =>
         {
             Debug.Log("Running in here");
             Debug.Log(response.GetValue());
             MapCreatorScript.CreateMap(response.GetValue().GetRawText());  // pass the map details to the script
         });
+
+        socket.OnUnityThread("trigger_event", (response) =>
+        {
+            Debug.Log("Running in here");
+            int[] coords = response.GetValue<int[]>();
+            MapCreatorScript.TriggerEvent(coords);
+        });
         
     }
-
-    // public void EmitTest()
-    // {
-    //     string eventName = EventNameTxt.text.Trim().Length < 1 ? "hello" : EventNameTxt.text;
-    //     string txt = DataTxt.text;
-    //     if (!IsJSON(txt))
-    //     {
-    //         socket.Emit(eventName, txt);
-    //     }
-    //     else
-    //     {
-    //         socket.EmitStringAsJSON(eventName, txt);
-    //     }
-    // }
-
+    
     public static bool IsJSON(string str)
     {
         if (string.IsNullOrWhiteSpace(str)) { return false; }

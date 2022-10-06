@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 4314728315305557260}
   - component: {fileID: 2182974768872026718}
   - component: {fileID: 1028086129840088144}
+  - component: {fileID: 6969552568310454878}
   m_Layer: 0
   m_Name: WallWithPainting
   m_TagString: Untagged
@@ -161,6 +162,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6969552568310454878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4727688163775369459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43075f752a630e146869c27a867d49f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5176254836171080845
 GameObject:
   m_ObjectHideFlags: 0

@@ -82,4 +82,16 @@ public class MapCreatorScript : MonoBehaviour
 
         return rotatedDimensions;
     }
+
+    public void TriggerEvent(int[] coords) {
+        try {
+            GameObject clickedGameObject = placedItems[coords[0], coords[1]];
+            ITriggerableBlock triggerableBlock = clickedGameObject.GetComponent<ITriggerableBlock>();
+            triggerableBlock.Trigger();
+        } 
+        catch (System.Exception e) {
+            Debug.Log("Could not trigger event");
+            Debug.Log(e);  // throwing system out of bound exceptions but I have no idea why are its 
+        }
+    }
 }
