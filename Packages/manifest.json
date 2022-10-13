@@ -2,6 +2,7 @@
   "dependencies": {
     "com.itisnajim.socketiounity": "https://github.com/Spillmaker/SocketIOUnity.git",
     "com.unity.ads": "4.3.0",
+    "com.unity.ai.navigation": "1.0.0-exp.4",
     "com.unity.analytics": "3.2.2",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.development": "1.0.1",

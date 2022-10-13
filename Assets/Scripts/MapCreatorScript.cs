@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using Newtonsoft.Json;
 
 [System.Serializable]
@@ -12,9 +13,9 @@ public struct ObjectMapper {
 
 public class MapCreatorScript : MonoBehaviour
 {
-
     public string json;
     public List<List<Block>> map;
+
     private GameObject[,] placedItems;
     
     void Start()
@@ -68,6 +69,10 @@ public class MapCreatorScript : MonoBehaviour
                 }
             }
         }
+
+        // build the mesh for the map
+        gameObject.GetComponentInParent<NavigationBaker>().BuildNavMesh();
+
     }
 
     Dimensions GetRotatedDimensions(float rotation, Dimensions dimensions) {
