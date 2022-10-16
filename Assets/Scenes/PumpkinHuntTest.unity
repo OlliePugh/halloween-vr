@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 295450612}
   - component: {fileID: 295450611}
   - component: {fileID: 295450610}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 569572695}
   - component: {fileID: 569572694}
   - component: {fileID: 569572693}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,9 +590,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 817407373, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1201600525}
+      propertyPath: patrolRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 817407374, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081167451810656534, guid: 2004f268366e8f7499bf5d7409d4003c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5081167451817902970, guid: 2004f268366e8f7499bf5d7409d4003c,
         type: 3}
       propertyPath: m_Name

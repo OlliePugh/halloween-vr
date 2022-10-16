@@ -9,6 +9,8 @@ public class SeekPlayer : MonoBehaviour
     public LayerMask detectionLayer;
     public GameObject head;
 
+    public DirectedAgent directedAgent;
+
     [Header("Debug Settings")]
     public int fovSegments;
 
@@ -20,6 +22,7 @@ public class SeekPlayer : MonoBehaviour
     void Start()
     {
         head = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(1).GetChild(0).gameObject;  // has to be a better way to do this
+        directedAgent = GetComponent<DirectedAgent>();
     }
 
     void Update()
@@ -68,7 +71,18 @@ public class SeekPlayer : MonoBehaviour
 
                 if (viewableAngle > -viewingAngle && viewableAngle < viewingAngle)  // does the monster see it 
                 {
-                   // Debug.Log("DETECTED PLAYER");  // TODO ensure that there is not a wall between the player and this object (raycast)
+                    RaycastHit hit;
+                    if (Physics.Raycast(head.transform.position, targetDirection, out hit, Vector3.Distance(head.transform.position, currentHit.transform.position), ~( detectionLayer.value | (1<<2) ) ))  // everything other than the player mask
+                    {
+                        // hit a wall
+                        Debug.DrawLine(head.transform.position, hit.point, Color.red);
+                        directedAgent.SetTarget(null);
+                    }
+                    else  // nothing inbetween the player
+                    {
+                        Debug.DrawLine(head.transform.position, currentHit.transform.position, Color.green);
+                        directedAgent.SetTarget(currentHit.gameObject);
+                    }
                 }
             }
         }
