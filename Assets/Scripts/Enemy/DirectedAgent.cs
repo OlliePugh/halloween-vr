@@ -12,6 +12,7 @@ public class DirectedAgent : MonoBehaviour
 
     [Header("Patrol Settings")]
     public float patrolRange;
+    public GameObject patrolLookAt;
 
     private Vector3 lastSeenLocation = Vector3.negativeInfinity;
     private float nextActionTime = 0.0f;
@@ -91,16 +92,17 @@ public class DirectedAgent : MonoBehaviour
     public void SetTarget(GameObject newTarget)
     {
         ConstraintSource constraintSource = new ConstraintSource();
+        constraintSource.weight = 1;
         if(newTarget)
         {
             constraintSource.sourceTransform = newTarget.transform;
-            constraintSource.weight = 1;
             headLookAt.SetSources(new List<ConstraintSource> { constraintSource });
         }
         else
         {
             this.SetDestination(lastSeenLocation);
-            headLookAt.SetSources(new List<ConstraintSource>());
+            constraintSource.sourceTransform = patrolLookAt.transform;
+            headLookAt.SetSources(new List<ConstraintSource> { constraintSource });
             if (target)  // if there was a target already
             {
                 lastSeenLocation = target.transform.position;  // set it as the last seen position

@@ -34,7 +34,7 @@ public class SeekPlayer : MonoBehaviour
             Vector3 modifiedForward = head.transform.forward;
             modifiedForward.y = 0.0f;
             modifiedForward.Normalize();
-            var line = (modifiedForward * detectionRadius); // TODO fix this as its still not quite right
+            var line = (modifiedForward * detectionRadius);
             float incrimentSize = (viewingAngle * 2) / fovSegments;
             var minLine = head.transform.position + (Quaternion.AngleAxis(-viewingAngle, transform.up) * line);
             var maxLine = head.transform.position + (Quaternion.AngleAxis(viewingAngle, transform.up) * line);
