@@ -123,338 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: a4947b9ceb6cfc34aa4bd757bfba2ef7, type: 2}
---- !u!1 &88270315
+--- !u!1 &88270315 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 88270315, guid: 2004f268366e8f7499bf5d7409d4003c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8439214224437445365}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 88270316}
-  - component: {fileID: 88270317}
-  m_Layer: 0
-  m_Name: rotatingHeadTarget
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &88270316
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88270315}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.76, z: 1.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1424546343}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &88270317
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88270315}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 50cf80c141b53a24ba4fae9722f19477, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b086cd8ca454a39419bef30dae0b0bfe, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!1 &295450608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 295450609}
-  - component: {fileID: 295450612}
-  - component: {fileID: 295450611}
-  - component: {fileID: 295450610}
-  m_Layer: 2
-  m_Name: Floor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &295450609
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295450608}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.561565, y: 0.5213543, z: -7.957218}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1273577243}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &295450610
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295450608}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &295450611
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295450608}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: e2b55085d4e92884586f6f5a3fa31289, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &295450612
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295450608}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &518493972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 518493973}
-  - component: {fileID: 518493975}
-  - component: {fileID: 518493974}
-  m_Layer: 0
-  m_Name: MapCreator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &518493973
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518493972}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.561565, y: 0.5213543, z: -7.957218}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1273577243}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &518493974
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518493972}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &518493975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518493972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d86ea7339e6cce40bdd9291515357ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  json: '[[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":1},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":4},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":5},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":6},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":7},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":8},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":9},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":10},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":11},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":12},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":13},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":14},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":15},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":16},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":17},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":18},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":19},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":21},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":22},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":23},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":0,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":1,"row":0},"rotation":0},null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":1,"row":7},"rotation":0},null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":1,"row":15},"rotation":0},null,null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":1,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":0},"rotation":0},null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":7},"rotation":0},null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":17},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":18},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":19},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":21},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":22},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":2,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":0},"rotation":0},null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":7},"rotation":0},null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":17},"rotation":0},null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":22},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":3,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":0},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":4},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":5},"rotation":0},null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":10},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":11},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":17},"rotation":0},null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":22},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":4,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":0},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":3},"rotation":0},null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":8},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":10},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":12},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":13},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":17},"rotation":0},null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":5,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":0},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":3},"rotation":0},null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":8},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":10},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":17},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":18},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":19},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":6,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":0},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":4},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":5},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":8},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":10},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":17},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":7,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":0},"rotation":0},null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":8},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":10},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":17},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":8,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":0},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":8},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":9},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":10},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":17},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":9,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":0},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":6},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":9},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":10},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":17},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":10,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":0},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":4},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":5},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":6},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":17},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":11,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":0},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":4},"rotation":0},null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":17},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":21},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":22},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":12,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":13,"row":0},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":13,"row":4},"rotation":0},null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":13,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":13,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":13,"row":17},"rotation":0},null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":13,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":0},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":4},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":6},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":7},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":8},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":9},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":10},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":12},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":17},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":18},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":20},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":14,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":0},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":2},"rotation":0},null,null,null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":12},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":13},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":14},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":15},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":17},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":15,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":0},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":2},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":5},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":6},"rotation":0},null,null,null,null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":17},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":16,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":1},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":2},"rotation":0},null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":8},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":10},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":11},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":17},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":17,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":0},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":8},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":11},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":17},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":18,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":0},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":4},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":5},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":8},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":11},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":17},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":19,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":0},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":8},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":11},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":12},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":13},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":14},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":15},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":16},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":17},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":20,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":21,"row":0},"rotation":0},null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":21,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":21,"row":8},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":21,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":21,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":21,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":1},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":4},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":6},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":8},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":21},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":22},"rotation":0},null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":22,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":23,"row":0},"rotation":0},null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":23,"row":8},"rotation":0},null,null,null,null,null,null,null,null,null,null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":23,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":23,"row":21},"rotation":0},null,null,{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":23,"row":24},"rotation":0}],[{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":0},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":1},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":2},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":3},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":4},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":5},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":6},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":7},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":8},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":9},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":10},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":11},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":12},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":13},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":14},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":15},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":16},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":17},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":18},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":19},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":20},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":21},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":22},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":23},"rotation":0},{"type":{"tileStyle":{"colour":"grey"},"dimensions":{"width":1,"height":1},"draggable":true,"key":"Wall","name":"Wall"},"parent":{"col":24,"row":24},"rotation":0}]]'
---- !u!1 &569572691
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 569572692}
-  - component: {fileID: 569572695}
-  - component: {fileID: 569572694}
-  - component: {fileID: 569572693}
-  m_Layer: 2
-  m_Name: Roof
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &569572692
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569572691}
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -8.561565, y: 3.5213542, z: -7.957218}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1273577243}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!64 &569572693
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569572691}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &569572694
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569572691}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &569572695
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569572691}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1201600525
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,90 +226,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1273577240
+--- !u!1 &1424546338 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1273577243}
-  - component: {fileID: 1273577242}
-  - component: {fileID: 1273577241}
-  m_Layer: 0
-  m_Name: Environment
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1273577241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273577240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe9925cd088030641a28234edda169bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1273577242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273577240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: -1372625422
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 1
-  m_DefaultArea: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.06666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
-  m_BuildHeightMesh: 0
---- !u!4 &1273577243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273577240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.561565, y: -0.5213543, z: 7.957218}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 295450609}
-  - {fileID: 569572692}
-  - {fileID: 518493973}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1424546343 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5081167451818139290, guid: 2004f268366e8f7499bf5d7409d4003c,
+  m_CorrespondingSourceObject: {fileID: 5081167451817902970, guid: 2004f268366e8f7499bf5d7409d4003c,
     type: 3}
   m_PrefabInstance: {fileID: 8439214224437445365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1424546344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424546338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e8eda1424e1d4099f25643faa5ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toRotate: {fileID: 88270315}
+  axis: {x: 0, y: 1, z: 0}
+  radius: 5
+  rotationSpeed: 80
+  headHeight: 1.7
+  maxHeadTurn: 50
+  radiusSpeed: 0.5
+--- !u!1001 &658295100373453345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 658295099126117689, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_Name
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.561565
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5213543
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.957218
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 658295099126117690, guid: 835e9921c423d964aa4446c3337c4c13,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 835e9921c423d964aa4446c3337c4c13, type: 3}
 --- !u!1001 &8439214224437445365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,10 +327,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 817407373, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
-      propertyPath: patrolRange
-      value: 30
+    - target: {fileID: 76717270, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 88270316, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88270316, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88270316, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 817407373, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 817407373, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
+      propertyPath: patrolLookAt
+      value: 
+      objectReference: {fileID: 88270315}
     - target: {fileID: 817407374, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -669,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 5081167451818139290, guid: 2004f268366e8f7499bf5d7409d4003c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 5081167451818139290, guid: 2004f268366e8f7499bf5d7409d4003c,
         type: 3}
@@ -679,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 5081167451818139290, guid: 2004f268366e8f7499bf5d7409d4003c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.8
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 5081167451818139290, guid: 2004f268366e8f7499bf5d7409d4003c,
         type: 3}
@@ -716,5 +420,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 88270317, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2004f268366e8f7499bf5d7409d4003c, type: 3}

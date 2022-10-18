@@ -10,6 +10,7 @@ public class SeekPlayer : MonoBehaviour
     public GameObject head;
 
     public DirectedAgent directedAgent;
+    public GameController gameController;
 
     [Header("Debug Settings")]
     public int fovSegments;
@@ -18,15 +19,32 @@ public class SeekPlayer : MonoBehaviour
     public int detectionRadius;
     public int viewingAngle;
 
+    [Header("BPM Impact")]
+    [Range(0, 3)]
+    public float upperBpmMultiplier = 2f;
+    [Range(0, 3)]
+    public float lowerBpmMultiplier = 0.5f;
+
+    private int defaultDetectionRadius;
+    private int defaultViewingAngle;
+
     // Start is called before the first frame update
     void Start()
     {
+        defaultDetectionRadius = detectionRadius;
+        defaultViewingAngle = viewingAngle;
+
         head = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(1).GetChild(0).gameObject;  // has to be a better way to do this
         directedAgent = GetComponent<DirectedAgent>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     void Update()
     {
+        float bpmSkew = (float) (gameController.bpm - GameController.MIN_BPM) / (float) (GameController.MAX_BPM - GameController.MIN_BPM);
+        float bpmMultiplier = (bpmSkew * (upperBpmMultiplier - lowerBpmMultiplier)) + lowerBpmMultiplier; // maps between 
+        detectionRadius = (int) (defaultDetectionRadius * bpmMultiplier);  // 100bpm = *1 | 50bpm = *0.5 | 200 bpm = *2
+        viewingAngle = (int) (defaultViewingAngle * bpmMultiplier);
         HandleDetection();
 
         if (Application.isEditor)

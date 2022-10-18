@@ -1,22 +1,32 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using SocketIOClient;
 using SocketIOClient.Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json.Linq;
+using UnityEngine.Networking;
 
 public class GameController : MonoBehaviour
 {
-    public SocketIOUnity socket;
+    public const int MIN_BPM = 50;
+    public const int MAX_BPM = 200;
 
+    public SocketIOUnity socket;
     public MapCreatorScript MapCreatorScript;
+    [Range(MIN_BPM, MAX_BPM)]
+    public int bpm;
+    public bool fetchBpm = true;
+    public int defaultBpm = 100;
+    public int bpmPollingRate = 1;  // how many seconds between updates
 
     // Start is called before the first frame update
     void Start()
     {
+        bpm = defaultBpm;
         MapCreatorScript = GameObject.Find("MapCreator").GetComponent<MapCreatorScript>();
-        var uri = new Uri("http://localhost:8080");
+        Uri uri = new Uri("http://localhost:8080");
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {
             Query = new Dictionary<string, string>
@@ -28,6 +38,15 @@ public class GameController : MonoBehaviour
             ,
             Transport = SocketIOClient.Transport.TransportProtocol.WebSocket
         });
+
+        SocketSetup(ref socket);
+
+        StartCoroutine(BpmCoroutine(uri));
+
+    }
+    
+    public void SocketSetup(ref SocketIOUnity socket)
+    {
         socket.JsonSerializer = new NewtonsoftJsonSerializer();
 
         ///// reserved socketio events
@@ -43,7 +62,7 @@ public class GameController : MonoBehaviour
         {
             Debug.Log($"{DateTime.Now} Reconnecting: attempt = {e}");
         };
-        
+
 
         Debug.Log("Connecting...");
         socket.Connect();
@@ -61,9 +80,8 @@ public class GameController : MonoBehaviour
             int[] coords = response.GetValue<int[]>();
             MapCreatorScript.TriggerEvent(coords);
         });
-        
     }
-    
+
     public static bool IsJSON(string str)
     {
         if (string.IsNullOrWhiteSpace(str)) { return false; }
@@ -84,6 +102,47 @@ public class GameController : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    IEnumerator BpmCoroutine(Uri uri)
+    {
+        while (true)
+        {
+            if (fetchBpm)
+            {
+                StartCoroutine(GetRequest(new Uri(uri, "/bpm").ToString(), (responseText) =>
+                {
+                    if (responseText != null) // if there is response text
+                    {
+                        int newBpm;
+                        if (int.TryParse(responseText, out newBpm))
+                        {
+                            bpm = Mathf.Clamp(newBpm, MIN_BPM, MAX_BPM);
+                        }
+                        else
+                        {
+                            bpm = defaultBpm; // default the bpm to 100
+                        }
+                    }
+                }));
+            }
+            yield return new WaitForSeconds(bpmPollingRate);
+        }
+    }
+
+    IEnumerator GetRequest(string uri, System.Action<string> callback)
+    {
+        UnityWebRequest uwr = UnityWebRequest.Get(uri);
+        yield return uwr.SendWebRequest();
+
+        if (uwr.result == UnityWebRequest.Result.ConnectionError)
+        {
+            Debug.Log("Error While Sending: " + uwr.error);
+        }
+        else
+        {
+            callback(uwr.downloadHandler.text);  // call the callback with the data
         }
     }
 
