@@ -14,7 +14,8 @@ public class GameController : MonoBehaviour
     public const int MAX_BPM = 200;
 
     public SocketIOUnity socket;
-    public MapCreatorScript MapCreatorScript;
+    public MapCreatorScript mapCreatorScript;
+    public NonBlockEventManager nonBlockEventManager;
     [Range(MIN_BPM, MAX_BPM)]
     public int bpm;
     public bool fetchBpm = true;
@@ -24,8 +25,11 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mapCreatorScript = GameObject.Find("MapCreator").GetComponent<MapCreatorScript>();
+        nonBlockEventManager = GameObject.Find("NonBlockEventManager").GetComponent<NonBlockEventManager>();
+        
         bpm = defaultBpm;
-        MapCreatorScript = GameObject.Find("MapCreator").GetComponent<MapCreatorScript>();
+
         Uri uri = new Uri("http://localhost:8080");
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {
@@ -71,14 +75,20 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Running in here");
             Debug.Log(response.GetValue());
-            MapCreatorScript.CreateMap(response.GetValue().GetRawText());  // pass the map details to the script
+            mapCreatorScript.CreateMap(response.GetValue().GetRawText());  // pass the map details to the script
         });
 
         socket.OnUnityThread("trigger_event", (response) =>
         {
-            Debug.Log("Running in here");
             int[] coords = response.GetValue<int[]>();
-            MapCreatorScript.TriggerEvent(coords);
+            mapCreatorScript.TriggerEvent(coords);
+        });
+
+        socket.OnUnityThread("non_block_event", (response) =>
+        {
+            Debug.Log("Non block trigger");
+            EventData eventData = response.GetValue<EventData>();
+            nonBlockEventManager.TriggerEvent(eventData);
         });
     }
 

@@ -16,8 +16,8 @@ public class SeekPlayer : MonoBehaviour
     public int fovSegments;
 
     [Header("AI Settings")]
-    public int detectionRadius;
-    public int viewingAngle;
+    public int defaultDetectionRadius;
+    public int defaultViewingAngle;
 
     [Header("BPM Impact")]
     [Range(0, 3)]
@@ -25,15 +25,11 @@ public class SeekPlayer : MonoBehaviour
     [Range(0, 3)]
     public float lowerBpmMultiplier = 0.5f;
 
-    private int defaultDetectionRadius;
-    private int defaultViewingAngle;
-
+    private int detectionRadius;
+    private int viewingAngle;
     // Start is called before the first frame update
     void Start()
     {
-        defaultDetectionRadius = detectionRadius;
-        defaultViewingAngle = viewingAngle;
-
         head = this.gameObject.transform.GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(1).GetChild(0).gameObject;  // has to be a better way to do this
         directedAgent = GetComponent<DirectedAgent>();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
@@ -93,7 +89,7 @@ public class SeekPlayer : MonoBehaviour
                     if (Physics.Raycast(head.transform.position, targetDirection, out hit, Vector3.Distance(head.transform.position, currentHit.transform.position), ~( detectionLayer.value | (1<<2) ) ))  // everything other than the player mask
                     {
                         // hit a wall
-                        Debug.DrawLine(head.transform.position, hit.point, Color.red);
+                        //Debug.DrawLine(head.transform.position, hit.point, Color.red);
                         directedAgent.SetTarget(null);
                     }
                     else  // nothing inbetween the player

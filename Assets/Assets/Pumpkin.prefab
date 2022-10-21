@@ -76,7 +76,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: 698d7543eef02b44eb8758d362a8f1d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: 698d7543eef02b44eb8758d362a8f1d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: 698d7543eef02b44eb8758d362a8f1d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.63
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: 698d7543eef02b44eb8758d362a8f1d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -228,8 +228,8 @@ MonoBehaviour:
   directedAgent: {fileID: 0}
   gameController: {fileID: 0}
   fovSegments: 10
-  detectionRadius: 20
-  viewingAngle: 50
+  defaultDetectionRadius: 10
+  defaultViewingAngle: 50
   upperBpmMultiplier: 1.37
   lowerBpmMultiplier: 0.76
 --- !u!114 &817407373
