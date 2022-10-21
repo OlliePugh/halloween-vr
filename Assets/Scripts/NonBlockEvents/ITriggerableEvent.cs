@@ -5,4 +5,6 @@ using UnityEngine;
 public interface ITriggerableEvent
 {
     void TriggerEvent(EventData data);
+
+    void EndEvent();
 }

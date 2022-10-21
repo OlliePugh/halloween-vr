@@ -1231,36 +1231,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 658295099831170933, guid: 835e9921c423d964aa4446c3337c4c13,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 658295099831170933, guid: 835e9921c423d964aa4446c3337c4c13,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 658295099831170933, guid: 835e9921c423d964aa4446c3337c4c13,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 658295100635348432, guid: 835e9921c423d964aa4446c3337c4c13,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 658295100635348432, guid: 835e9921c423d964aa4446c3337c4c13,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658295100635348432, guid: 835e9921c423d964aa4446c3337c4c13,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835e9921c423d964aa4446c3337c4c13, type: 3}
 --- !u!1 &1303893946
@@ -1465,6 +1435,10 @@ PrefabInstance:
     - target: {fileID: 1147965471979518, guid: 0ddea81a21def2441b61569e0a44ca14, type: 3}
       propertyPath: m_Name
       value: Flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229193494168842, guid: 0ddea81a21def2441b61569e0a44ca14, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4848275991718962, guid: 0ddea81a21def2441b61569e0a44ca14, type: 3}
       propertyPath: m_RootOrder

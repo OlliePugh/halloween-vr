@@ -6,21 +6,20 @@ public class SpawnMonster : MonoBehaviour, ITriggerableEvent
 {
     public GameObject pumkinMonster;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject currentSpawnedObject;
 
     public void TriggerEvent(EventData eventData)
     {
         Vector3 location = new Vector3(eventData.location[0], 0, eventData.location[1]);
-        Instantiate(pumkinMonster, location, Quaternion.identity);
+        currentSpawnedObject = Instantiate(pumkinMonster, location, Quaternion.identity);
+    }
+
+    public void EndEvent()
+    {
+        if (currentSpawnedObject)
+        {
+            Destroy(currentSpawnedObject);
+            currentSpawnedObject = null;
+        }
     }
 }

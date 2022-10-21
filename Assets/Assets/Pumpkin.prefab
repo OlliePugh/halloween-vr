@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   updateFrequency: 0.1
-  animationMovingThreshold: 0.1
+  animationMovingThreshold: 0.05
   patrolRange: 30
   patrolLookAt: {fileID: 88270315}
 --- !u!195 &817407374

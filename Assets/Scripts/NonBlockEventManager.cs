@@ -25,6 +25,16 @@ public class NonBlockEventManager : MonoBehaviour
             return;
         }
 
-        eventManager.GetComponent<ITriggerableEvent>().TriggerEvent(data);  // dispatch the event data to the respective event manager
+        ITriggerableEvent _event = eventManager.GetComponent<ITriggerableEvent>();
+        _event.TriggerEvent(data);
+        StartCoroutine(WaitToKill(data.duration, _event));
+      // dispatch the event data to the respective event manager
     }
+
+    IEnumerator WaitToKill(int duration, ITriggerableEvent _event)
+    {
+        yield return new WaitForSeconds(duration);
+        _event.EndEvent();
+    }
+
 }

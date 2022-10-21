@@ -8,6 +8,6 @@ public class EventData
     public string key;
     #nullable enable
     public int[] location;  // can be null
-    public float duration;
+    public int duration;
     #nullable disable
 }
