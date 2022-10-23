@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NonBlockEventManager : MonoBehaviour
 {
-    public Dictionary<string, GameObject> children = new Dictionary<string, GameObject>();
+    public Dictionary<string, ITriggerableEvent> children = new Dictionary<string, ITriggerableEvent>();
 
     // Start is called before the first frame update
     void Start()
@@ -12,22 +12,23 @@ public class NonBlockEventManager : MonoBehaviour
         foreach (Transform child in transform)
         {
             GameObject currentChild = child.gameObject;
-            children[currentChild.name] = currentChild;
+            ITriggerableEvent _event = currentChild.GetComponent<ITriggerableEvent>();
+            children[currentChild.name] = _event;
         }
     }
 
     public void TriggerEvent(EventData data)
     {
-        GameObject eventManager;
+        ITriggerableEvent eventManager;
         if (!children.TryGetValue(data.key, out eventManager))
         {
             Debug.Log($"Could not find event handler for {data.key}");
             return;
         }
 
-        ITriggerableEvent _event = eventManager.GetComponent<ITriggerableEvent>();
-        _event.TriggerEvent(data);
-        StartCoroutine(WaitToKill(data.duration, _event));
+
+        eventManager.TriggerEvent(data);
+        StartCoroutine(WaitToKill(data.duration, eventManager));
       // dispatch the event data to the respective event manager
     }
 
@@ -35,6 +36,14 @@ public class NonBlockEventManager : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         _event.EndEvent();
+    }
+
+    public void CleanAll()  // end all events
+    {
+        foreach (KeyValuePair<string, ITriggerableEvent> currentEvent in children)
+        {
+            currentEvent.Value.EndEvent();  // end the event
+        }
     }
 
 }

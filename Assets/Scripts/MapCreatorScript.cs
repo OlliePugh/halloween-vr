@@ -30,7 +30,7 @@ public class MapCreatorScript : MonoBehaviour
     {
     }
 
-    void ClearMap() {
+    public void ClearMap() {
         foreach (Transform child in this.transform) {
             GameObject.Destroy(child.gameObject);
         }

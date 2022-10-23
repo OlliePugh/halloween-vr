@@ -76,6 +76,7 @@ public class GameController : MonoBehaviour
             Debug.Log("Running in here");
             Debug.Log(response.GetValue());
             mapCreatorScript.CreateMap(response.GetValue().GetRawText());  // pass the map details to the script
+            this.GameReady();  // map has been created and the game is ready to play
         });
 
         socket.OnUnityThread("trigger_event", (response) =>
@@ -89,6 +90,13 @@ public class GameController : MonoBehaviour
             Debug.Log("Non block trigger");
             EventData eventData = response.GetValue<EventData>();
             nonBlockEventManager.TriggerEvent(eventData);
+        });
+
+        socket.OnUnityThread("end_game", (response) =>
+        {
+            mapCreatorScript.ClearMap();
+            nonBlockEventManager.CleanAll();
+            Debug.Log("END GAME TRIGGERED NEED TO CLEAN UP ALL EVENTS");
         });
     }
 
@@ -156,8 +164,8 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void EmitSpin()
+    public void GameReady()
     {
-        socket.Emit("spin");
+        socket.Emit("game_ready");  // emit this when the game is ready for the user to start sending events
     }
 }
