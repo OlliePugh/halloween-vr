@@ -94,9 +94,7 @@ public class GameController : MonoBehaviour
 
         socket.OnUnityThread("end_game", (response) =>
         {
-            mapCreatorScript.ClearMap();
-            nonBlockEventManager.CleanAll();
-            Debug.Log("END GAME TRIGGERED NEED TO CLEAN UP ALL EVENTS");
+            EndGame();
         });
     }
 
@@ -172,14 +170,21 @@ public class GameController : MonoBehaviour
     public void KillPlayer()
     {
         Debug.Log("PLAYER LOSES, NEED TO ADD SOME SORT OF SCREEN");
-        
-        mapCreatorScript.ClearMap();
+        socket.Emit("end_game", "player_killed");
+        EndGame();
+    }
+
+    public void CollectKey()
+    {
+        Debug.Log("KEY HAS BEEN COLLECTED PLAYER WINS");
+        socket.Emit("end_game", "key_collected");
         EndGame();
     }
 
     public void EndGame()
     {
+        mapCreatorScript.ClearMap();
+        nonBlockEventManager.CleanAll();
         Debug.Log("NEED TO ADD SOME PLAYER_KILLED HANDLER ON THE SERVER");
-        socket.Emit("player_killed");
     }
 }
