@@ -46,25 +46,50 @@ public class MapCreatorScript : MonoBehaviour
             for (int j = 0; j < map[i].Count; j++)
             {
                 Block currentBlock = map[i][j];
-                if (currentBlock != null && placedItems[i,j] == null) {
-                    try {  // if it fails just skip this coord
-                        // does it have a parent
-                        Coordinate placeCoords = new Coordinate(i,j);
-                        if (currentBlock.parent != null) {
-                            placeCoords = currentBlock.parent;  // set the coords to the parents coord
-                        }
-                        GameObject newObject = Instantiate(Resources.Load(currentBlock.type.key) as GameObject, new Vector3(placeCoords.row,0,placeCoords.col), Quaternion.identity, this.transform);
-                        double rotation = -currentBlock.rotation * (180/System.Math.PI);
-                        newObject.transform.Rotate(0,(float)rotation,0);
-                        Dimensions rotatedDimensions = GetRotatedDimensions(currentBlock.rotation, currentBlock.type.dimensions);
-                        for (int x = placeCoords.col; x != placeCoords.col + rotatedDimensions.width; x += rotatedDimensions.width > 0 ? 1 : -1)  {
-                            for (int y = placeCoords.row; y != placeCoords.row + rotatedDimensions.height; y += rotatedDimensions.height > 0 ? 1 : -1) {
-                                placedItems[x,y] = newObject;  // set the object as being placed already
+                Coordinate placeCoords = new Coordinate(i, j);
+                if (currentBlock != null)  // if there is a block 
+                {
+                    if (placedItems[i, j] == null)  // do we need to create a new block at the parent coords?
+                    {
+                        try
+                        {  // if it fails just skip this coord
+                           // does it have a parent
+                            if (currentBlock.parent != null)
+                            {
+                                placeCoords = currentBlock.parent;  // set the coords to the parents coord
+                            }
+                            GameObject newObject = Instantiate(Resources.Load(currentBlock.type.key) as GameObject, new Vector3(placeCoords.row, 0, placeCoords.col), Quaternion.identity, this.transform);
+                            double rotation = -currentBlock.rotation * (180 / System.Math.PI);
+                            newObject.transform.Rotate(0, (float)rotation, 0);
+                            Dimensions rotatedDimensions = GetRotatedDimensions(currentBlock.rotation, currentBlock.type.dimensions);
+                            for (int x = placeCoords.col; x != placeCoords.col + rotatedDimensions.width; x += rotatedDimensions.width > 0 ? 1 : -1)
+                            {
+                                for (int y = placeCoords.row; y != placeCoords.row + rotatedDimensions.height; y += rotatedDimensions.height > 0 ? 1 : -1)
+                                {
+                                    placedItems[x, y] = newObject;  // set the object as being placed already
+                                }
                             }
                         }
+                        catch (System.Exception e)
+                        {
+                            Debug.Log(e);  // throwing system out of bound exceptions but I have no idea why are its 
+                        }
                     }
-                    catch (System.Exception e) {
-                        Debug.Log(e);  // throwing system out of bound exceptions but I have no idea why are its 
+
+                    // check for any shelf items
+                    if (currentBlock.shelfItems != null)
+                    {
+                        foreach (string key in currentBlock.shelfItems)
+                        {
+                            try
+                            {
+                                GameObject shelfItem = Instantiate(Resources.Load(key) as GameObject, new Vector3(placeCoords.row, 2.5f, placeCoords.col), Quaternion.identity, this.transform);  // place at the top of the world so it can drop to the 
+                            }
+                            catch (System.Exception e)
+                            {
+                                Debug.Log(e);  // throwing system out of bound exceptions but I have no idea why are its 
+                            }
+                        }
                     }
                 }
             }

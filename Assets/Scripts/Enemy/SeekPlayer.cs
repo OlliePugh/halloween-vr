@@ -12,6 +12,8 @@ public class SeekPlayer : MonoBehaviour
     public DirectedAgent directedAgent;
     public GameController gameController;
 
+    public float killDistance = 0.5f;
+
     [Header("Debug Settings")]
     public int fovSegments;
 
@@ -96,6 +98,12 @@ public class SeekPlayer : MonoBehaviour
                     {
                         Debug.DrawLine(head.transform.position, currentHit.transform.position, Color.green);
                         directedAgent.SetTarget(currentHit.gameObject);
+
+                        // is the distance very low?
+                        if(Vector3.Distance(this.transform.position, currentHit.transform.position) < killDistance)
+                        {
+                            gameController.KillPlayer();
+                        }
                     }
                 }
             }

@@ -168,4 +168,18 @@ public class GameController : MonoBehaviour
     {
         socket.Emit("game_ready");  // emit this when the game is ready for the user to start sending events
     }
+
+    public void KillPlayer()
+    {
+        Debug.Log("PLAYER LOSES, NEED TO ADD SOME SORT OF SCREEN");
+        
+        mapCreatorScript.ClearMap();
+        EndGame();
+    }
+
+    public void EndGame()
+    {
+        Debug.Log("NEED TO ADD SOME PLAYER_KILLED HANDLER ON THE SERVER");
+        socket.Emit("player_killed");
+    }
 }

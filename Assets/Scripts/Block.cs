@@ -8,6 +8,7 @@ public class Block
     public Type type;
     #nullable enable
     public Coordinate? parent;  // can be null
+    public string[] shelfItems;
     #nullable disable
     public float rotation;
 }

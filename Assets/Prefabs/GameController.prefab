@@ -44,4 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99032b7a6de13474eaa267b0127eeca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapCreatorScript: {fileID: 0}
+  mapCreatorScript: {fileID: 0}
+  nonBlockEventManager: {fileID: 0}
+  bpm: 50
+  fetchBpm: 1
+  defaultBpm: 120
+  bpmPollingRate: 1

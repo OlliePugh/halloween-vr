@@ -227,6 +227,7 @@ MonoBehaviour:
   head: {fileID: 5081167451817902804}
   directedAgent: {fileID: 0}
   gameController: {fileID: 0}
+  killDistance: 2
   fovSegments: 10
   defaultDetectionRadius: 10
   defaultViewingAngle: 50
