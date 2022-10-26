@@ -2856,6 +2856,7 @@ GameObject:
   - component: {fileID: 2083694908}
   - component: {fileID: 2083694907}
   - component: {fileID: 2083694909}
+  - component: {fileID: 2083694910}
   m_Layer: 8
   m_Name: XR Origin
   m_TagString: Untagged
@@ -2914,6 +2915,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2083694910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083694906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4b76be8012bc44b8e2438d556b2800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 10
+  name: player
 --- !u!1 &2091005444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,6 +3072,11 @@ PrefabInstance:
     - target: {fileID: 4388647600280976891, guid: 3224ee3369972e049a737753933f5dcd,
         type: 3}
       propertyPath: m_Name
+      value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388647600280976891, guid: 3224ee3369972e049a737753933f5dcd,
+        type: 3}
+      propertyPath: m_TagString
       value: GameController
       objectReference: {fileID: 0}
     m_RemovedComponents: []

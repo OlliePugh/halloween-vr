@@ -169,7 +169,7 @@ public class GameController : MonoBehaviour
 
     public void KillPlayer()
     {
-        Debug.Log("PLAYER LOSES, NEED TO ADD SOME SORT OF SCREEN");
+        Debug.Log("PLAYER KILLED BY MONSTER");
         socket.Emit("end_game", "player_killed");
         EndGame();
     }
@@ -185,6 +185,13 @@ public class GameController : MonoBehaviour
     {
         mapCreatorScript.ClearMap();
         nonBlockEventManager.CleanAll();
-        Debug.Log("NEED TO ADD SOME PLAYER_KILLED HANDLER ON THE SERVER");
+    }
+
+    public void EmitObjectLocation(string name, Vector3 location)
+    {
+        if (socket != null)
+        {
+            socket.EmitStringAsJSON($"entity_location", $"{{\"key\":\"{name}\",\"location\":{{\"row\": {location.x},\"col\":{location.z}}}}}");
+        }
     }
 }
