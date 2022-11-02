@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
         
         bpm = defaultBpm;
 
-        Uri uri = new Uri("http://localhost:8080");
+        Uri uri = new Uri("http://localhost:5000");
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {
             Query = new Dictionary<string, string>

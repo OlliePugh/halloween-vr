@@ -34,6 +34,14 @@ public class MapCreatorScript : MonoBehaviour
         foreach (Transform child in this.transform) {
             GameObject.Destroy(child.gameObject);
         }
+
+        GameObject[] keys = GameObject.FindGameObjectsWithTag("Key");
+
+        foreach (GameObject key in keys)
+        {
+            Destroy(key);
+        }
+
     }
 
     public void CreateMap(string jsonMap) {
