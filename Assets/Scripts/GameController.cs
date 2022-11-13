@@ -48,6 +48,16 @@ public class GameController : MonoBehaviour
         StartCoroutine(BpmCoroutine(uri));
 
     }
+
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("ADMIN ending game");
+            this.KillPlayer();
+        }
+    }
     
     public void SocketSetup(ref SocketIOUnity socket)
     {
